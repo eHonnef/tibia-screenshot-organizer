@@ -5,7 +5,7 @@ import json
 # Configuration file
 config_file = "./settings.json"
 # Tibia screenshot dir
-tibia_print_dir = "C:/etc/Tibia/packages/Tibia/screenshots"
+tibia_print_dir = "PATH_TO/Tibia/packages/Tibia/screenshots"
 # Destination dir of the screenshots
 dest = "./Prints"
 # Move screenshots or copy

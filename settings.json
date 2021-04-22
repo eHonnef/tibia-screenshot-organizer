@@ -1,5 +1,5 @@
 {
-  "print-dir":"C:/etc/Tibia/packages/Tibia/screenshots",
+  "print-dir":"PATH_TO/Tibia/packages/Tibia/screenshots",
   "destination":"./prints",
   "copy":"True"
 }
