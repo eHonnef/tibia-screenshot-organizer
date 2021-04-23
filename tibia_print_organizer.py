@@ -5,7 +5,7 @@ import json
 # Configuration file
 config_file = "./settings.json"
 # Tibia screenshot dir
-tibia_print_dir = "PATH_TO/Tibia/packages/Tibia/screenshots"
+tibia_print_dir = "{}/Tibia/packages/Tibia/screenshots".format(os.environ["LOCALAPPDATA"])
 # Destination dir of the screenshots
 dest = "./Prints"
 # Move screenshots or copy
@@ -18,9 +18,27 @@ if os.path.exists(config_file):
   tibia_print_dir = j.get("print-dir", tibia_print_dir)
   dest = j.get("destination", dest)
   copy = j.get("copy", copy)
+  print("\nLoaded config file:")
+else:
+  print("\nUsing default values:")
+
+if not os.path.exists(tibia_print_dir):
+  print("Screenshot directory doesn't exist: {}\n".format(tibia_print_dir))
+  print("Check the settings.json file and change the print-dir variable value.")
+  exit()
 
 if copy:
   operation = shutil.copy
+  op_str = "Operation: copy"
+else:
+  op_str = "Operation: move (screenshots will be removed from tibia's folder)"
+
+# Print configurations
+print("""
+Screenshot directory: {}
+Destination directory: {}
+{}
+""".format(tibia_print_dir, dest, op_str))
 
 # Create the destination dir if doesn't exist
 if not os.path.exists(dest):
@@ -47,4 +65,4 @@ for pr in prints:
   # Move files to destination
   operation(pr, sstype_dir)
 
-print("DONE!")
+print("\nDONE!")
