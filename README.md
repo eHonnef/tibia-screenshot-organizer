@@ -2,6 +2,10 @@
 
 Script to organize the tibia's screenshot folder. It'll move (or copy) the screenshots from the tibia's screenshot folder to another folder and organize by `character name and screenshot type` (e.g.: LevelUP, DeathPVE, Hotkey, etc).
 
+## Release
+
+There is a compiled version for Windows in the releases. [Link](https://github.com/eHonnef/tibia-screenshot-organizer/releases/tag/1.0.1)
+
 ## Requirements
 
 Only Python 3+.
