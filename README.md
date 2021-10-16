@@ -1,5 +1,7 @@
 # Tibia screenshot organizer
 
+[Esse arquivo em PT-BR](README-PT-BR.md)
+
 Script to organize the tibia's screenshot folder. It'll move (or copy) the screenshots from the tibia's screenshot folder to another folder and organize by `character name and screenshot type` (e.g.: LevelUP, DeathPVE, Hotkey, etc).
 
 ## Release
