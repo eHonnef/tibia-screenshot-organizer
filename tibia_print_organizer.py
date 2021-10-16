@@ -5,7 +5,9 @@ import json
 # Configuration file
 config_file = "./settings.json"
 # Tibia screenshot dir
-tibia_print_dir = "{}/Tibia/packages/Tibia/screenshots".format(os.environ["LOCALAPPDATA"])
+tibia_print_dir = ""
+if "LOCALAPPDATA" in os.environ.keys():
+  tibia_print_dir = "{}/Tibia/packages/Tibia/screenshots".format(os.environ["LOCALAPPDATA"])
 # Destination dir of the screenshots
 dest = "./Prints"
 # Move screenshots or copy
